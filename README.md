@@ -7,16 +7,13 @@ Journal App is an app where in users can pen down their thoughts and feelings.
 ## Prerequisite
 You will need the following to run this project:
 
-A laptop or desktop machine with internet access
-```
-Android Studio 3.1.0
+* A laptop or desktop machine with internet access
+* Android Studio 3.1.0
 
 ## Setting Up
-Clone the Repository from Github
-```
-Open the project folder using Android Studio IDE
+* Clone the Repository from Github
+* Open the project folder using Android Studio IDE
 
 ## Testing
-UI testing with espresso
-```
-Unit test using Android JUnit Runner
+* UI testing with espresso
+* Unit test using Android JUnit Runner
