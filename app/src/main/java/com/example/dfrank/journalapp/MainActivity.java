@@ -21,6 +21,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.dfrank.journalapp.activities.AboutActivity;
 import com.example.dfrank.journalapp.activities.ProfileActivity;
 import com.example.dfrank.journalapp.activities.SignInActivity;
 import com.example.dfrank.journalapp.addJournal.AddJournalFragment;
@@ -175,6 +176,7 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            startActivity(new Intent(this, AboutActivity.class));
            return true;
         }
 
@@ -189,7 +191,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private Uri getPhoto(){
-        return mAuth.getCurrentUser().getPhotoUrl();
+        return FirebaseAuth.getInstance().getCurrentUser().getPhotoUrl();
     }
     private String getEmail(){
         return mAuth.getCurrentUser().getEmail();
@@ -203,6 +205,8 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_logout) {
             alertDialog();
+        }if (id == R.id.nav_home){
+            navigateToFragment(new JournalFragment());
         } else if (id == R.id.nav_addjournal) {
             navigateToFragment(AddJournalFragment.newInstance(null));
         }else if(id==R.id.profile){

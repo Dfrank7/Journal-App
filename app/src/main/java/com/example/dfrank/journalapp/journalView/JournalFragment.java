@@ -1,5 +1,6 @@
 package com.example.dfrank.journalapp.journalView;
 
+import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
@@ -37,14 +38,13 @@ public class JournalFragment extends BaseFragment implements JournalContract.Vie
         LoaderManager.LoaderCallbacks<ArrayList<Journal>>{
     @BindView(R.id.recyclerview)
     RecyclerView recyclerView;
-    JournalContract.Presenter presenter;
-
     private static final int JOURNAL_LOADER_ID = 0;
 
     private static String TAG = JournalFragment.class.getSimpleName();
     private JournalListAdapter journalListAdapter;
 
-    public JournalFragment(){}
+    public JournalFragment(){
+    }
     ArrayList<Journal> journals;
 
     @Override
@@ -63,11 +63,11 @@ public class JournalFragment extends BaseFragment implements JournalContract.Vie
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ((MainActivity) getActivity()).setDrawerIconToHome();
-        journals = new ArrayList<Journal>();
-        journalListAdapter = new JournalListAdapter(journals);
+
+        journalListAdapter = new JournalListAdapter(new ArrayList<Journal>());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.smoothScrollToPosition(0);
         recyclerView.setAdapter(journalListAdapter);
@@ -94,6 +94,7 @@ public class JournalFragment extends BaseFragment implements JournalContract.Vie
                 //deleting journal
 
                 getContext().getContentResolver().delete(uri, null, null);
+                reloadList();
             }
 
 
@@ -111,6 +112,7 @@ public class JournalFragment extends BaseFragment implements JournalContract.Vie
         navigateToFragment(AddJournalFragment.newInstance(null));
     }
 
+
     @Override
     public void onDeleteJournal() {
         getLoaderManager().restartLoader(JOURNAL_LOADER_ID, null, this);
@@ -119,6 +121,10 @@ public class JournalFragment extends BaseFragment implements JournalContract.Vie
     @Override
     public void moveToNextStep() {
 
+    }
+
+    void reloadList(){
+        getLoaderManager().restartLoader(JOURNAL_LOADER_ID,null,this);
     }
 
     @Override

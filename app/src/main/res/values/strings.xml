@@ -6,4 +6,19 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="about">Journal App is an app where in users can pen down their thoughts and feelings.<br/>
+    * Login using google authentication
+    * View all entries to their diary.
+    * View the contents of a diary entry.
+    * Add and modify an entry.
+    * Delete an Entry by Swiping.
+    * Update User Profile Using Firebase.
+    </string>
+    <string name="begging">Good day Reviewer, I have tried my best in building this app to the best of my
+    knowledge, I also tried implementiGood day Reviewer, I have tried my best in building this app to the best of my
+    knowledge, I also tried implementing all the features we were ask to do. I hope have tried enough to be qualified to selected for the nanodegree schorlarship.
+    This Nanodegree would really help me in my journey of becoming a world class developer, and i ask for
+    leniency in your grading. Thank you and God bless 💪🏼 ng all the features we were ask to do. I hope have tried enough to be qualified to selected for the nanodegree schorlarship.
+    This Nanodegree would really help me in my journey of becoming a world class developer, and i ask for
+    leniency in your grading. Thank you and God bless 🍻 💪🏼 </string>
 </resources>

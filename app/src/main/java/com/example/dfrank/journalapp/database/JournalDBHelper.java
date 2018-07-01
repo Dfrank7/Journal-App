@@ -1,17 +1,13 @@
 package com.example.dfrank.journalapp.database;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import com.example.dfrank.journalapp.model.Journal;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class JournalDBHelper extends SQLiteOpenHelper {
@@ -36,7 +32,6 @@ public class JournalDBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_ENTRIES);
-        //addDemo(db);
     }
 
     @Override
@@ -45,24 +40,6 @@ public class JournalDBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-//    private void addDemo(SQLiteDatabase db){
-//        db.beginTransaction();
-//        try {
-//            addJournal(db);
-//            db.setTransactionSuccessful();
-//        } finally {
-//            db.endTransaction();
-//        }
-//    }
-
-//    public void addJournal(SQLiteDatabase database) {
-//        database = this.getWritableDatabase();
-//        ContentValues values = new ContentValues();
-//        values.put(JournalDBContract.JournalEntry.COLUMN_JOURNAL_NAME, "Testing");
-//        values.put(JournalDBContract.JournalEntry.COLUMN_JOURNAL_THOUGHT, "I am doing a demo");
-//        values.put(JournalDBContract.JournalEntry.COLOMN_JOURNAL_FEELING, "My mood is good bro");
-//        database.insert(JournalDBContract.JournalEntry.TABLE_NAME, null, values);
-//    }
 
     public ArrayList<Journal> getJournalList(SQLiteDatabase db){
         return getAllJournalsFromCursor(getJournalCursor(db));

@@ -60,6 +60,7 @@ public class AddJournalFragment extends BaseFragment implements AddJournalContra
         if (getArguments() != null && journal != null) {
             //We want to edit journal
             setToolbarTitle("Edit Journal");
+            saveButton.setText("Update");
             journalToChange = journal;
             //prepopulate the fields with the details of the journal to edit
             editTextTitle.setText(journal.journalTitle);
@@ -68,6 +69,7 @@ public class AddJournalFragment extends BaseFragment implements AddJournalContra
         } else {
             // We want to add new journal
             setToolbarTitle("Add new Journal");
+            saveButton.setText("Save");
         }
 
 
