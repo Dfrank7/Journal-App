@@ -23,6 +23,9 @@ You will need the following to run this project:
 * Clone the Repository from Github
 * Open the project folder using Android Studio IDE
 
+## Pattern
+* MVP(Model View Presenter)
+
 ## Testing
 * UI testing with espresso
 * Unit test using Android JUnit Runner
