@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/add_reminder_layout_top"
+        android:orientation="vertical"
+        android:layout_height="148dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/journal_title"
+            android:layout_marginLeft="72dp"
+            android:hint="Title Of Journal"
+            android:textSize="25dp"
+            android:lines="2"
+            android:minLines="2"
+            android:gravity="top|left"
+            android:scrollHorizontally="false"
+            android:inputType="textCapWords|textMultiLine"
+            android:layout_marginRight="16dp"
+            android:layout_height="50dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/thought"
+            android:layout_marginLeft="72dp"
+            android:hint="Thoughts"
+            android:textSize="25dp"
+            android:lines="2"
+            android:minLines="2"
+            android:gravity="top|left"
+            android:scrollHorizontally="false"
+            android:inputType="textCapWords|textMultiLine"
+            android:layout_marginRight="16dp"
+            android:layout_height="50dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/feelings"
+            android:layout_marginLeft="72dp"
+            android:hint="Title Of Journal"
+            android:textSize="25dp"
+            android:lines="2"
+            android:minLines="2"
+            android:gravity="top|left"
+            android:scrollHorizontally="false"
+            android:inputType="textCapWords|textMultiLine"
+            android:layout_marginRight="16dp"
+            android:layout_height="50dp"/>
+
+
+
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveButton"
+        android:layout_marginTop="7dp"
+        android:layout_gravity="center"
+        android:text="save"/>
+
+</LinearLayout>

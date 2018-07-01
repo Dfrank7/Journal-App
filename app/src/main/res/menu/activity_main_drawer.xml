@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_log_out"
+            android:title="Log Out" />
+        <item
+            android:id="@+id/nav_addjournal"
+            android:icon="@drawable/ic_add"
+            android:title="Add Journal" />
+    <item android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_account_circle_black_24dp"/>
+
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Tools" />
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>

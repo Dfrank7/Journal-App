@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="86dp"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    android:elevation="3dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_height="86dp"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <ImageView android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/thumbnail_image"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="4dp"
+            android:padding="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toRightOf="@id/thumbnail_image"
+            android:layout_toLeftOf="@+id/active_image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/recycle_title"
+                android:layout_width="match_parent"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="#000000"
+                android:layout_height="wrap_content"
+                tools:text="Title"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/recycle_thought"
+                android:layout_width="match_parent"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                tools:text="Thought"/>
+
+
+        </LinearLayout>
+
+        <ImageView android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/active_image"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+
